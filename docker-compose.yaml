@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-bot
+    environment:
+      POSTGRES_DB: messages
+      POSTGRES_USER: bot
+      POSTGRES_PASSWORD: 3.1415926535897
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d
+    restart: always
+
+  spring-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spring-app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/messages
+      SPRING_DATASOURCE_USERNAME: bot
+      SPRING_DATASOURCE_PASSWORD: 3.1415926535897
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    restart: always
+
+volumes:
+  postgres_data:

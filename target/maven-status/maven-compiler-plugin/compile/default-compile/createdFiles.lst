@@ -1,0 +1,6 @@
+ru/telegrambot/bot/initializer/Initializer.class
+ru/telegrambot/bot/model/Message.class
+ru/telegrambot/bot/repository/MessageRepository.class
+ru/telegrambot/bot/TelegramBot.class
+ru/telegrambot/bot/controller/TelegramBotController.class
+ru/telegrambot/bot/config/DatabaseConfig.class
