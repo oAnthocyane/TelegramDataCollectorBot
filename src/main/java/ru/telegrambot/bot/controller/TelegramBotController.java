@@ -2,21 +2,21 @@ package ru.telegrambot.bot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RestController;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import ru.telegrambot.bot.model.Message;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.telegrambot.bot.repository.MessageRepository;
 
 @Component
 public class TelegramBotController extends TelegramLongPollingBot {
 
 
-    private final MessageRepository messageRepository;
+    private final UpdateController updateController;
 
     @Autowired
-    public TelegramBotController(MessageRepository messageRepository) {
-        this.messageRepository = messageRepository;
+    public TelegramBotController(UpdateController updateController) {
+        this.updateController = updateController;
     }
 
     @Override
@@ -31,11 +31,18 @@ public class TelegramBotController extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        if (update.hasMessage() && update.getMessage().hasText()) {
-            String messageText = update.getMessage().getText();
-            Message message = new Message();
-            message.setText(messageText);
-            messageRepository.save(message);
+        updateController.processUpdate(update);
+
+    }
+
+    public void getAnswerMessage(SendMessage message){
+        if (message != null) {
+            try {
+                execute(message);
+            } catch (TelegramApiException e) {
+                System.out.println("Отправлено пустое сообщение");
+            }
+
         }
     }
 }
