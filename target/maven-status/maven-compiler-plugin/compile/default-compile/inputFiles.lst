@@ -1,6 +1,9 @@
-/home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/controller/TelegramBotController.java
-/home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/config/DatabaseConfig.java
-/home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/initializer/Initializer.java
-/home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/repository/MessageRepository.java
-/home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/model/Message.java
-/home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/TelegramBot.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\config\DatabaseConfig.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\initializer\Initializer.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\dataEnum\LongMessages.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\controller\TelegramBotController.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\TelegramBot.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\repository\MessageRepository.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\controller\UpdateController.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\model\Message.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\dataEnum\CommandService.java

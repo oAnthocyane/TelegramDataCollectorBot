@@ -1,5 +1,6 @@
 package ru.telegrambot.bot.controller;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -12,13 +13,19 @@ import ru.telegrambot.bot.repository.MessageRepository;
 public class TelegramBotController extends TelegramLongPollingBot {
 
 
-    private final UpdateController updateController;
+    private  UpdateController updateController;
 
     @Autowired
-    public TelegramBotController(UpdateController updateController) {
+    public void setUpdateController(UpdateController updateController) {
         this.updateController = updateController;
     }
 
+    @PostConstruct
+    public void afterPropertiesSet() {
+        if (updateController != null) {
+            updateController.registerBot(this);
+        }
+    }
     @Override
     public String getBotUsername() {
         return "data_test_collector_bot";
