@@ -13,16 +13,19 @@ import static ru.telegrambot.bot.dataEnum.LongMessages.START_MESSAGE;
 @Component
 public class UpdateController {
 
-private final TelegramBotController telegramBotController;
+private TelegramBotController telegramBotController;
 private final MessageRepository messageRepository;
 
 @Autowired
-public UpdateController(TelegramBotController telegramBotController, MessageRepository messageRepository){
-    this.telegramBotController = telegramBotController;
+public UpdateController(MessageRepository messageRepository){
     this.messageRepository = messageRepository;
 }
+    public void registerBot(TelegramBotController telegramBot){
+        this.telegramBotController = telegramBot;
+    }
 
     public void processUpdate(Update update) {
+        System.out.println("check");
         if(update.hasMessage()){
             if(update.getMessage().hasText()){
                 distributeTextMessages(update);
