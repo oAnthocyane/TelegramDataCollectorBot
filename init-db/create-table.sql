@@ -9,5 +9,4 @@ CREATE TABLE IF NOT EXISTS app_user (
     user_name VARCHAR(255) NOT NULL,
     count_message INT NOT NULL DEFAULT 0,
     last_message TIMESTAMP
-    -- Другие поля, если есть
 );

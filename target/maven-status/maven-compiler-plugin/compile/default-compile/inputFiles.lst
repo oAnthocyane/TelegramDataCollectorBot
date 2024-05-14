@@ -1,3 +1,4 @@
+/home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/model/User.java
 /home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/controller/TelegramBotController.java
 /home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/config/DatabaseConfig.java
 /home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/initializer/Initializer.java
@@ -7,3 +8,4 @@
 /home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/dataEnum/CommandService.java
 /home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/dataEnum/LongMessages.java
 /home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/TelegramBot.java
+/home/pavel/programming/ML_DL/ITMO/BonusTrack/TelegramBot/src/main/java/ru/telegrambot/bot/controller/Scheduler.java

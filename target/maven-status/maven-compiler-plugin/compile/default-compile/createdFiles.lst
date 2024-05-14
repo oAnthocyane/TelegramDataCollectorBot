@@ -2,9 +2,12 @@ ru/telegrambot/bot/controller/UpdateController.class
 ru/telegrambot/bot/dataEnum/LongMessages.class
 ru/telegrambot/bot/initializer/Initializer.class
 ru/telegrambot/bot/dataEnum/CommandService.class
-ru/telegrambot/bot/model/Message.class
+ru/telegrambot/bot/model/User.class
 ru/telegrambot/bot/repository/MessageRepository.class
-ru/telegrambot/bot/TelegramBot.class
-ru/telegrambot/bot/controller/UpdateController$1.class
 ru/telegrambot/bot/controller/TelegramBotController.class
+ru/telegrambot/bot/model/Message.class
+ru/telegrambot/bot/TelegramBot.class
+ru/telegrambot/bot/model/User$UserBuilder.class
+ru/telegrambot/bot/controller/UpdateController$1.class
+ru/telegrambot/bot/controller/Scheduler.class
 ru/telegrambot/bot/config/DatabaseConfig.class
