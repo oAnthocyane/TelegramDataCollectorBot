@@ -1,20 +1,27 @@
 package ru.telegrambot.bot.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
-@Getter
-@Setter
-@Builder
-public class User {
 
-    private String userName;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+@Table(name = "app_user")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(name = "user_name")
+    private String userName;
+    @Column(name = "telegram_user_id", nullable = false, unique = true)
     private long telegramUserId;
+    @Column(name = "count_message")
     private int countMessage;
+    @Column(name = "last_message")
     private Timestamp lastMessage;
 
 }

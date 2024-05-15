@@ -7,7 +7,6 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import ru.telegrambot.bot.repository.MessageRepository;
 
 @Component
 public class TelegramBotController extends TelegramLongPollingBot {
@@ -28,12 +27,12 @@ public class TelegramBotController extends TelegramLongPollingBot {
     }
     @Override
     public String getBotUsername() {
-        return "data_test_collector_bot";
+        return "popohui_bot";
     }
 
     @Override
     public String getBotToken() {
-        return "7140790587:AAEmFXNm79DAyLmEhyI_r6r82rgKbyGYc4g";
+        return "6777971980:AAGEthWTlPC5_HH24-TvBe5SvrLsH5QcJVo";
     }
 
     @Override

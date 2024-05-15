@@ -5,9 +5,11 @@ ru/telegrambot/bot/dataEnum/CommandService.class
 ru/telegrambot/bot/model/User.class
 ru/telegrambot/bot/repository/MessageRepository.class
 ru/telegrambot/bot/controller/TelegramBotController.class
+ru/telegrambot/bot/repository/UserRepository.class
+ru/telegrambot/bot/service/MessageService.class
 ru/telegrambot/bot/model/Message.class
 ru/telegrambot/bot/TelegramBot.class
 ru/telegrambot/bot/model/User$UserBuilder.class
 ru/telegrambot/bot/controller/UpdateController$1.class
 ru/telegrambot/bot/controller/Scheduler.class
-ru/telegrambot/bot/config/DatabaseConfig.class
+ru/telegrambot/bot/service/UserService.class
