@@ -27,12 +27,12 @@ public class TelegramBotController extends TelegramLongPollingBot {
     }
     @Override
     public String getBotUsername() {
-        return "popohui_bot";
+        return "data_test_collector_bot";
     }
 
     @Override
     public String getBotToken() {
-        return "6777971980:AAGEthWTlPC5_HH24-TvBe5SvrLsH5QcJVo";
+        return "7140790587:AAEmFXNm79DAyLmEhyI_r6r82rgKbyGYc4g";
     }
 
     @Override
