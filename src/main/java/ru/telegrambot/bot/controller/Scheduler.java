@@ -6,6 +6,9 @@ import ru.telegrambot.bot.model.User;
 import ru.telegrambot.bot.repository.MessageRepository;
 import ru.telegrambot.bot.repository.UserRepository;
 
+import java.sql.Timestamp;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 @Service
@@ -19,11 +22,13 @@ public class Scheduler {
         this.updateController = updateController;
     }
 
-    @Scheduled(fixedRate = 10800000) // Запуск каждые 3 часа
+    @Scheduled(cron = "0 0 12 * * ?") // Запуск каждый день в 12:00
     private void notification() {
-        List<User> allUsers = userRepository.findAll();
-        for (User user : allUsers) {
-            updateController.checkAndSendReminder(user);
+        Timestamp twoDaysAgo = Timestamp.from(Instant.now().minus(2, ChronoUnit.DAYS));
+        List<User> usersToNotify = userRepository.findByLastMessageBefore(twoDaysAgo);
+        for (User user : usersToNotify) {
+            updateController.setView(updateController.generateSendMessageWithTextByUser(user, "Привет, "+user.getUserName()+"!" +
+                    "\nНапишите нам, что вы уже успели сделать за сегодня!"));
         }
     }
 }

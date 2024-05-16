@@ -106,19 +106,5 @@ public class UpdateController {
         return sendMessage;
     }
 
-    public void checkAndSendReminder(User user) {
-        // Проверяем, прошло ли более 2 дней с момента последнего сообщения пользователя
-        Timestamp lastMessageTime = user.getLastMessage();
-        if (lastMessageTime != null) {
-            LocalDateTime lastMessageDateTime = lastMessageTime.toLocalDateTime();
-            LocalDateTime currentDateTime = LocalDateTime.now();
-            Duration duration = Duration.between(lastMessageDateTime, currentDateTime);
-            if (duration.toDays() >= 2) {
-                // Отправляем напоминание пользователю
-                setView(generateSendMessageWithTextByUser(user, "Напоминаем вам о нашем боте!"));
-                // Обновляем lastMessage в базе данных
-                userService.updateLastMessageTime(user.getId());
-            }
-        }
-    }
+
 }
