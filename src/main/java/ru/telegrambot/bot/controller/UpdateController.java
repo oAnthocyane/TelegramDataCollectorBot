@@ -67,8 +67,9 @@ public class UpdateController {
         switch (cmd) {
             case START -> setView(generateSendMessageWithText(update, START_MESSAGE));
             case SENDTOUS -> setView(generateSendMessageWithText(update, SEND_TO_US));
-            case MESSAGE -> processingForAI(textMessage, update, tgUser);
             case CHECK -> setView(generateSendMessageWithText(update, CHECK_MESSAGE));
+            case MESSAGE -> processingForAI(textMessage, update, tgUser);
+
         }
     }
 
