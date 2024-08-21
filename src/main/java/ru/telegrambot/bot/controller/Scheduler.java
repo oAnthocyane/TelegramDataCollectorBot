@@ -22,7 +22,7 @@ public class Scheduler {
         this.updateController = updateController;
     }
 
-    @Scheduled(cron = "0 0 12 * * ?") // Запуск каждый день в 12:00
+    @Scheduled(initialDelay = 0) // Запуск каждый день в 12:00
     private void notification() {
         Timestamp twoDaysAgo = Timestamp.from(Instant.now().minus(2, ChronoUnit.DAYS));
         List<User> usersToNotify = userRepository.findByLastMessageBefore(twoDaysAgo);
