@@ -1,4 +1,4 @@
-package ru.telegrambot.bot.controller;
+/*package ru.telegrambot.bot.controller;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -31,4 +31,4 @@ public class Scheduler {
                     "\nНапишите нам, что вы уже успели сделать за сегодня!"));
         }
     }
-}
+}*/
