@@ -6,7 +6,10 @@ public enum CommandService {
     START("/start"),
 
     MESSAGE("/message"),
+
+    CHECK("/check"),
     SENDTOUS("/sendToUs");
+
     private final String value;
 
     CommandService(String value) {

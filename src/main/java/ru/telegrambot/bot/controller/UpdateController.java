@@ -15,8 +15,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
-import static ru.telegrambot.bot.dataEnum.LongMessages.SEND_TO_US;
-import static ru.telegrambot.bot.dataEnum.LongMessages.START_MESSAGE;
+import static ru.telegrambot.bot.dataEnum.LongMessages.*;
 
 @Component
 public class UpdateController {
@@ -36,7 +35,6 @@ public class UpdateController {
     }
 
     public void processUpdate(Update update) {
-        System.out.println("check");
         if (update.hasMessage()) {
             if (update.getMessage().hasText()) {
                 distributeTextMessages(update);
@@ -70,6 +68,7 @@ public class UpdateController {
             case START -> setView(generateSendMessageWithText(update, START_MESSAGE));
             case SENDTOUS -> setView(generateSendMessageWithText(update, SEND_TO_US));
             case MESSAGE -> processingForAI(textMessage, update, tgUser);
+            case CHECK -> setView(generateSendMessageWithText(update, CHECK_MESSAGE));
         }
     }
 

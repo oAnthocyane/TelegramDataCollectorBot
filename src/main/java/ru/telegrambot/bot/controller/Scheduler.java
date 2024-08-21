@@ -27,8 +27,7 @@ public class Scheduler {
         Timestamp twoDaysAgo = Timestamp.from(Instant.now().minus(2, ChronoUnit.DAYS));
         List<User> usersToNotify = userRepository.findByLastMessageBefore(twoDaysAgo);
         for (User user : usersToNotify) {
-            updateController.setView(updateController.generateSendMessageWithTextByUser(user, "Привет, "+user.getUserName()+"!" +
-                    "\nНапишите нам, что вы уже успели сделать за сегодня!"));
+            updateController.setView(updateController.generateSendMessageWithTextByUser(user, "Сырнику болу не лень и он включил. Работайте братья!"));
         }
     }
 }
