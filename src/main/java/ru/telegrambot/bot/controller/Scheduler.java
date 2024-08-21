@@ -1,4 +1,4 @@
-/*package ru.telegrambot.bot.controller;
+package ru.telegrambot.bot.controller;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class Scheduler {
         this.updateController = updateController;
     }
 
-    @Scheduled(cron = "0 0 12 * * ?") // Запуск каждый день в 12:00
+    @Scheduled(initialDelay = 0) // Запуск каждый день в 12:00
     private void notification() {
         Timestamp twoDaysAgo = Timestamp.from(Instant.now().minus(2, ChronoUnit.DAYS));
         List<User> usersToNotify = userRepository.findByLastMessageBefore(twoDaysAgo);
@@ -31,4 +31,4 @@ public class Scheduler {
                     "\nНапишите нам, что вы уже успели сделать за сегодня!"));
         }
     }
-}*/
+}
