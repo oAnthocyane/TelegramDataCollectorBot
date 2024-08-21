@@ -1,0 +1,14 @@
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\initializer\Initializer.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\dataEnum\LongMessages.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\repository\UserRepository.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\controller\TelegramBotController.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\model\User.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\repository\MessageRepository.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\model\Message.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\config\SchedulingConfig.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\TelegramBot.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\service\MessageService.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\service\UserService.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\controller\UpdateController.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\dataEnum\CommandService.java
+C:\Users\movol\IdeaProjects\TelegramDataCollectorBot\src\main\java\ru\telegrambot\bot\controller\Scheduler.java
